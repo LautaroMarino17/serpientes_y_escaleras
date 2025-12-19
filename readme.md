@@ -7,7 +7,7 @@
 
 ## Reglas del Juego
 
-* Cada jugador comienza en la posición **0**.
+* Cada jugador comienza en la posición **1**.
 * En cada turno, un jugador **lanza el dado** y avanza el número indicado.
 * Si cae en una:
 

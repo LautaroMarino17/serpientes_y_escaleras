@@ -1,34 +1,29 @@
-/bin/
-# Eclipse metadata
-.project
-.classpath
-.settings/
-
-# Java / Maven / Gradle
-target/
-bin/
-build/
+### IntelliJ IDEA ###
 out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-# Logs
-*.log
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-# Sistema operativo
-.DS_Store
-Thumbs.db
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# Archivos temporales
-*.tmp
-*.swp
-*~
-
-# Cache de Eclipse
-.metadata/
-
-# Archivos de compilación
-*.class
-
-# IDEs adicionales (por si abrís el proyecto en otros)
-.idea/
-*.iml
+### VS Code ###
 .vscode/
+
+### Mac OS ###
+.DS_Store

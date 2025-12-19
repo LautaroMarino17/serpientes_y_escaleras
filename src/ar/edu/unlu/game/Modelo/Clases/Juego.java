@@ -260,7 +260,7 @@ public class Juego extends ObservableRemoto
             jugador.setPosicion(casillaDestino);
             notificarObservadores(Eventos.SERPIENTE);
         }else{
-            // Avance
+            // Avance, sacar si quiero ver la tirada
             notificarObservadores(Eventos.AVANCE);
         }
 
@@ -389,23 +389,6 @@ public class Juego extends ObservableRemoto
 
     public void setUltimoAvance(int ultimoAvance) {
         this.ultimoAvance = ultimoAvance;
-    }
-
-    public List<String> obtenerPartidasGanadas() {
-
-        List<String> resultado = new ArrayList<>();
-
-        if (logueados == null) {
-            return resultado;
-        }
-
-        for (Jugador j : logueados) {
-            resultado.add(
-                    j.getAlias() + " - " + j.getPartidasGanadas()
-            );
-        }
-
-        return resultado;
     }
 
     @Override

@@ -19,7 +19,7 @@ public class Jugador implements Serializable {
         this.alias = alias;
         this.contrasena = contrasena;
         this.partidasGanadas = 0;
-        this.posicion = 0;
+        this.posicion = 1;
     }
 
     // =========================

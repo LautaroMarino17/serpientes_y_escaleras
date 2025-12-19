@@ -107,6 +107,7 @@ public class VistaGrafica extends JFrame implements IVista {
             if (logueado) {
                 controlador.continuarPartida();
                 mostrarPanelJuego();
+                mostrarTablero(controlador.verTablero());
             } else {
                 mostrarMensaje("Inicie sesión primero", 2000);
             }

@@ -20,26 +20,26 @@ public class Tablero implements Serializable{
 
         for (int i = 0; i < 9; i++) {
 
-            int inicio = random.nextInt(98) + 2; // 2 a 99
+            int inicio = random.nextInt(98) + 2;
 
-            int subidaMax = 99 - inicio; // todo el espacio disponible
+            int subidaMax = 99 - inicio;
 
-            if (subidaMax <= 0) continue; // no puede subir
+            if (subidaMax <= 0) continue;
 
-            int fin = inicio + random.nextInt(subidaMax) + 1; // sube al menos 1
+            int fin = inicio + random.nextInt(subidaMax) + 1;
 
             CasillaEscalera escalera = new CasillaEscalera(inicio, fin);
             casillas.set(inicio - 1, escalera);
         }
         for (int i = 0; i < 9; i++) {
 
-            int inicio = random.nextInt(98) + 2; // 2 a 99
+            int inicio = random.nextInt(98) + 2;
 
-            int bajadaMax = inicio; // todo lo que puede bajar
+            int bajadaMax = inicio;
 
-            if (bajadaMax <= 0) continue; // no puede bajar
+            if (bajadaMax <= 0) continue;
 
-            int fin = inicio - (random.nextInt(bajadaMax)); // baja al menos 1
+            int fin = inicio - (random.nextInt(bajadaMax));
 
             CasillaSerpiente serpiente = new CasillaSerpiente(inicio, fin);
             casillas.set(inicio - 1, serpiente);

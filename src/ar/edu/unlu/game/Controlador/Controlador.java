@@ -67,7 +67,7 @@ public class Controlador implements IControladorRemoto {
                 miAlias = alias;
                 vista.mostrarMensaje(
                         "Sesión iniciada correctamente. Usuario: " + alias + ".",
-                        3000
+                        5000
                 );
 
                 juego.ingresarALaSala(alias, contrasena);
@@ -144,10 +144,6 @@ public class Controlador implements IControladorRemoto {
             juego.continuarPartida();
 
             if (juego.getFase() == SIN_COMENZAR) {
-                vista.mostrarMensaje(
-                        "La partida no estaba iniciada. Comenzando juego...",
-                        2000
-                );
                 comenzarPartida();
                 return;
             } else {
@@ -189,10 +185,10 @@ public class Controlador implements IControladorRemoto {
 
             String mensaje = "Top 5 jugadores:\n";
             for (Jugador j : top) {
-                mensaje += "- " + j.getAlias()
-                        + " | Partidas ganadas: "
+                mensaje += j.getAlias()
+                        + " - Partidas ganadas: "
                         + j.getPartidasGanadas()
-                        + "\n";
+                        +"|  " + "\n";
             }
 
             vista.mostrarMensaje(mensaje, 10000);
@@ -300,6 +296,9 @@ public class Controlador implements IControladorRemoto {
                                     + juego.getCasillaDestino() + ".\n",
                             7000
                     );
+                    vista.actualizarPosicionJugador(
+                            juego.posicionJugador(miAlias)
+                    );
                 }
             }
 
@@ -309,6 +308,9 @@ public class Controlador implements IControladorRemoto {
                             "Serpiente encontrada. Retrocedés hasta la casilla "
                                     + juego.getCasillaDestino() + ".\n",
                             7000
+                    );
+                    vista.actualizarPosicionJugador(
+                            juego.posicionJugador(miAlias)
                     );
                 }
             }

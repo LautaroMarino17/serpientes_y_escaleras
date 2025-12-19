@@ -159,7 +159,7 @@ public class VistaConsola extends JFrame implements IVista {
 
             case "cerrarsesion" -> {
                 if (partes.length == 3) {
-                    controlador.cerrarSesion(partes[1], partes[2]);
+                    controlador.cerrarSesion();
                     logueado = false;
                     mostrarMensaje("Cerraste sesión", 0);
                 } else {

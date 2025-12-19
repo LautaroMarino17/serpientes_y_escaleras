@@ -18,7 +18,7 @@ public interface IJuego extends IObservableRemoto {
 
     boolean ingresarALaSala (String alias, String contrasena) throws RemoteException;
 
-    boolean quitarDeLaSala(String alias, String contrasena)throws RemoteException;
+    boolean quitarDeLaSala(String alias)throws RemoteException;
 
     boolean iniciarSesion(String alias, String contrasena) throws RemoteException;
 

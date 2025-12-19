@@ -88,17 +88,16 @@ public class Controlador implements IControladorRemoto {
         }
     }
 
-    public void cerrarSesion(String alias, String contrasena) {
+    public void cerrarSesion() {
         boolean ok;
 
         try {
-            ok = juego.quitarDeLaSala(alias, contrasena);
+            ok = juego.quitarDeLaSala(miAlias);
         } catch (RemoteException e) {
             throw new RuntimeException(e);
         }
 
         if (ok) {
-            miAlias = alias;
             vista.mostrarMensaje(
                     "Saliste de la sala. Iniciá sesión para volver a ingresar.",
                     3000
@@ -157,7 +156,7 @@ public class Controlador implements IControladorRemoto {
                 vista.mostrarPanelJuego();
                 vista.mostrarMensaje(
                         "Es tu turno.\n",
-                        1000
+                        5000
                 );
             } else {
                 vista.mostrarMensaje(

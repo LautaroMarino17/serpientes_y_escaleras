@@ -164,7 +164,7 @@ public class Juego extends ObservableRemoto
     }
 
     @Override
-    public boolean quitarDeLaSala(String alias, String contrasena)
+    public boolean quitarDeLaSala(String alias)
             throws RemoteException {
 
         if (alias == null || alias.isBlank()) return false;

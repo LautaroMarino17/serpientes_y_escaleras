@@ -116,6 +116,7 @@ public class VistaGrafica extends JFrame implements IVista {
         btnCierre.addActionListener(e -> {
             logueado = false;
             mostrarMensaje("Cerraste sesión", 2000);
+            controlador.cerrarSesion();
             mostrarPanelInicio();
         });
 
